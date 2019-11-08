@@ -1,6 +1,6 @@
 # Mogrifier LSTM
 
-This replicates the [Mogrifier LSTM paper](https://arxiv.org/abs/1909.01792) and can be run locally or in Google Colaboratory.
+This repository implements an LSTM from scratch in PyTorch (allowing PyTorch to handle the backpropagation step) and then attempts to replicate the [Mogrifier LSTM paper](https://arxiv.org/abs/1909.01792). The code can be run locally or in Google Colaboratory.
 
 ## Local Install
 
