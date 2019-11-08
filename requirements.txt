@@ -1,0 +1,6 @@
+numpy
+torch
+ipython
+ipykernel
+matplotlib
+allennlp
