@@ -2,7 +2,7 @@
 
 This repository implements an LSTM from scratch in PyTorch (allowing PyTorch to handle the backpropagation step) and then attempts to replicate the [Mogrifier LSTM paper](https://arxiv.org/abs/1909.01792). The code can be run locally or in Google Colaboratory.
 
-Note on Mogrifier results: I was not able to replicate the Mogrifier LSTM results cited in the paper or even get notably better performance compared to a regular LSTM. Perhaps with a larger dataset, more training time, better network architecture, or better hyperparameter tuning this could be achieved.
+*Note on Mogrifier results: I was not able to replicate the Mogrifier LSTM results cited in the paper or even get notably better performance compared to a regular LSTM. Perhaps with a larger dataset, more training time, better network architecture, or better hyperparameter tuning this could be achieved. The Mogrifier LSTM paper claimed they would release their own code, but this has yet to happen (paper was released in September 2019). When that code is available, it should be at https://github.com/deepmind/lamb .*
 
 ## Local Install
 
