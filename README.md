@@ -55,6 +55,10 @@ I tested text prediction using the Brown corpus dataset (more info in the notebo
 
 *Note on Mogrifier results: The Mogrifier LSTM paper claimed they would release their own code, but this has yet to happen (paper was released in September 2019). When that code is available, it should be at https://github.com/deepmind/lamb .*
 
+# Running the Code Yourself
+
+There are a couple of ways to run the code in this repository. One method is to run in a Jupyter notebook locally. The other method is to upload the notebook file to Google Colaboratory and run from there. The second method is convenient, but may not give you all the training time you really want. Instructions for both methods are found below.
+
 ## Local Install
 
 Recommended you use Python `3.7`.
