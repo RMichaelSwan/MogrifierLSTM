@@ -10,7 +10,7 @@ I tested the Mogrifier LSTM on a basic RNN text prediction problem using the Bro
 
 ### My LSTM (made from scratch; slow)
 
-*automatic early stopping never reached criteria for stop*
+*automatic early stopping never reached criteria for stop in 210 epochs, though may have been close*
 <pre><code>
  'best_epoch': 207,
  'training_epochs': 209,
