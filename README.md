@@ -12,6 +12,7 @@ I tested text prediction using the Brown corpus dataset (more info in the notebo
 
 *automatic early stopping never reached criteria for stop*
 
+<pre><code>
  'best_epoch': 207,
  'training_epochs': 209,
  'epoch': 209,
@@ -20,11 +21,13 @@ I tested text prediction using the Brown corpus dataset (more info in the notebo
  'training_gpu_0_memory_MB': 952,
  'validation_loss': 1.401858257619958,
  'best_validation_loss': 1.4012448003417568}
+</code></pre>
 
 ### Official PyTorch LSTM (must faster run time)
 
 *automatic early stopping used*
 
+<pre><code>
  'best_epoch': 197,
  'training_epochs': 203,
  'epoch': 203,
@@ -33,11 +36,13 @@ I tested text prediction using the Brown corpus dataset (more info in the notebo
  'training_gpu_0_memory_MB': 1014,
  'validation_loss': 1.4007186230860258,
  'best_validation_loss': 1.4002491518070823
+</code></pre>
 
 ### Mogrifier LSTM (used my LSTM and then added improvements)
 
 *automatic early stopping used*
 
+<pre><code>
  'best_epoch': 141
  'training_epochs': 147,
  'epoch': 147,
@@ -46,6 +51,7 @@ I tested text prediction using the Brown corpus dataset (more info in the notebo
  'training_gpu_0_memory_MB': 1115,
  'validation_loss': 1.401227615381542,
  'best_validation_loss': 1.3973440904366343
+</code></pre>
 
 *Note on Mogrifier results: The Mogrifier LSTM paper claimed they would release their own code, but this has yet to happen (paper was released in September 2019). When that code is available, it should be at https://github.com/deepmind/lamb .*
 
