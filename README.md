@@ -96,6 +96,16 @@ and then work on the `MogrifierLSTM.ipynb` notebook.
 Check the python environment you are using on the top right corner.
 If the name of environment doesn't match, change it to your virtual environment in "Kernel>Change kernel".
 
+### Viewing the results in tensorboard
+
+After running your own training runs and collecting all your event logs, you can see the results in tensorboard by running the following command in a terminal and then viewing the link provided in your browser.
+
+```shell
+#replace "run" with whatever directory you have saved 
+#your runs to (if different than what was set in the notebook) 
+tensorboard --logdir run
+```
+
 ## Cloud Install (Google Colaboratory)
 
 1. Head over to [Google Colab](https://colab.research.google.com/). It is recommended that you switch to a GPU notebook as things will usually run a little faster that way. There are instructions for this on the colaboratory site.
