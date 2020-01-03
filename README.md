@@ -22,7 +22,7 @@ I tested the Mogrifier LSTM on a basic RNN text prediction problem using the Bro
  'best_validation_loss': 1.4012448003417568}
 </code></pre>
 
-### Official PyTorch LSTM (must faster run time)
+### Official PyTorch LSTM (much better optimized than my implementation)
 
 *automatic early stopping used*
 <pre><code>
