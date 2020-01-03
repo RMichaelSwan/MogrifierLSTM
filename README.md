@@ -8,7 +8,7 @@ I tested the Mogrifier LSTM on a basic RNN text prediction problem using the Bro
 
 ![LSTM validation loss comparison](lstm-comparison.png "LSTM comparison")
 
-### My LSTM (made from scratch)
+### My LSTM (made from scratch; slow)
 
 *automatic early stopping never reached criteria for stop*
 <pre><code>
@@ -22,7 +22,7 @@ I tested the Mogrifier LSTM on a basic RNN text prediction problem using the Bro
  'best_validation_loss': 1.4012448003417568}
 </code></pre>
 
-### Official PyTorch LSTM (much better optimized than my implementation)
+### Official PyTorch LSTM (has optimized performance)
 
 *automatic early stopping used*
 <pre><code>
