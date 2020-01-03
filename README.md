@@ -4,13 +4,14 @@ This repository implements an LSTM from scratch in PyTorch (allowing PyTorch to 
 
 ## Mogrifier LSTM Results
 
-I tested text prediction using the Brown corpus dataset (more info in the notebook) and saw earlier convergence results and slightly better validation loss. To further verify these results, we need to test against more datasets and more neural network architectures. Checkpoints and metrics have been saved for each LSTM type per epoch (see run folder); I didn't CM the tensorboard event logs as they are huge, but you can get most of the same information just looking at the JSON metric files. A summary of the results I got can be seen below:
+I tested text prediction using the Brown corpus dataset (more info in the notebook) and saw **earlier convergence results and slightly better validation loss**. To further verify these results, we need to test against more datasets and more neural network architectures. Checkpoints and metrics have been saved for each LSTM type per epoch (see run folder); I didn't CM the tensorboard event logs as they are huge, but you can get most of the same information just looking at the JSON metric files. A summary of the results I got can be seen below:
 
 ![LSTM validation loss comparison](lstm-comparison.png "LSTM comparison")
 
 ### My LSTM (made from scratch)
 
 *automatic early stopping never reached criteria for stop*
+
  'best_epoch': 207,
  'training_epochs': 209,
  'epoch': 209,
@@ -23,6 +24,7 @@ I tested text prediction using the Brown corpus dataset (more info in the notebo
 ### Official PyTorch LSTM (must faster run time)
 
 *automatic early stopping used*
+
  'best_epoch': 197,
  'training_epochs': 203,
  'epoch': 203,
@@ -35,6 +37,7 @@ I tested text prediction using the Brown corpus dataset (more info in the notebo
 ### Mogrifier LSTM (used my LSTM and then added improvements)
 
 *automatic early stopping used*
+
  'best_epoch': 141
  'training_epochs': 147,
  'epoch': 147,
