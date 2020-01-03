@@ -2,7 +2,49 @@
 
 This repository implements an LSTM from scratch in PyTorch (allowing PyTorch to handle the backpropagation step) and then attempts to replicate the [Mogrifier LSTM paper](https://arxiv.org/abs/1909.01792). The code can be run locally or in Google Colaboratory.
 
-*Note on Mogrifier results: I was not able to replicate the Mogrifier LSTM results cited in the paper or even get notably better performance compared to a regular LSTM. Perhaps with a larger dataset, more training time, better network architecture, or better hyperparameter tuning this could be achieved. My own code is slower than optimized versions of LSTMs, so one improvement that could be made is to bolt the Mogrifier implementation onto an existing optimized implementation of the LSTM cell. The Mogrifier LSTM paper claimed they would release their own code, but this has yet to happen (paper was released in September 2019). When that code is available, it should be at https://github.com/deepmind/lamb .*
+## Mogrifier LSTM Results
+
+I tested text prediction using the Brown corpus dataset (more info in the notebook) and saw earlier convergence results and slightly better validation loss. To further verify these results, we need to test against more datasets and more neural network architectures. Checkpoints and metrics have been saved for each LSTM type per epoch (see run folder); I didn't CM the tensorboard event logs as they are huge, but you can get most of the same information just looking at the JSON metric files. A summary of the results I got can be seen below:
+
+![LSTM validation loss comparison](lstm-comparison.png "LSTM comparison")
+
+### My LSTM (made from scratch)
+
+*automatic early stopping never reached criteria for stop*
+ 'best_epoch': 207,
+ 'training_epochs': 209,
+ 'epoch': 209,
+ 'training_loss': 1.3781935724280996,
+ 'training_cpu_memory_MB': 2750.236,
+ 'training_gpu_0_memory_MB': 952,
+ 'validation_loss': 1.401858257619958,
+ 'best_validation_loss': 1.4012448003417568}
+
+### Official PyTorch LSTM (must faster run time)
+
+*automatic early stopping used*
+ 'best_epoch': 197,
+ 'training_epochs': 203,
+ 'epoch': 203,
+ 'training_loss': 1.3790437656746815,
+ 'training_cpu_memory_MB': 2751.964,
+ 'training_gpu_0_memory_MB': 1014,
+ 'validation_loss': 1.4007186230860258,
+ 'best_validation_loss': 1.4002491518070823
+
+### Mogrifier LSTM (used my LSTM and then added improvements)
+
+*automatic early stopping used*
+ 'best_epoch': 141
+ 'training_epochs': 147,
+ 'epoch': 147,
+ 'training_loss': 1.3751222530060265,
+ 'training_cpu_memory_MB': 2771.636,
+ 'training_gpu_0_memory_MB': 1115,
+ 'validation_loss': 1.401227615381542,
+ 'best_validation_loss': 1.3973440904366343
+
+*Note on Mogrifier results: The Mogrifier LSTM paper claimed they would release their own code, but this has yet to happen (paper was released in September 2019). When that code is available, it should be at https://github.com/deepmind/lamb .*
 
 ## Local Install
 
