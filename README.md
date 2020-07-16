@@ -2,6 +2,8 @@
 
 This repository implements an LSTM from scratch in PyTorch (allowing PyTorch to handle the backpropagation step) and then attempts to replicate the [Mogrifier LSTM paper](https://arxiv.org/abs/1909.01792). The code can be run locally or in Google Colaboratory.
 
+**Update:** The code for the mogrifier LSTM has been posted. It's a bit hard to grok due to way they parameterized their neural network model experiments, so I will attempt to update my own implementation for correctness, but if you want to go to the source, [look here](https://github.com/deepmind/lamb)
+
 ## Mogrifier LSTM Results
 
 I tested the Mogrifier LSTM on a basic RNN text prediction problem using the Brown corpus dataset (more info in the notebook) and saw **earlier convergence results and slightly better validation and training loss results** when comparing the Mogrifier LSTM to a vanilla LSTM. To further verify these results, we need to test against more datasets and more neural network architectures. Checkpoints and metrics have been saved for each LSTM type per epoch (see run folder); I didn't CM the tensorboard event logs as they are huge, but you can get most of the same information just looking at the JSON metric files. A summary of the results I got can be seen below:
