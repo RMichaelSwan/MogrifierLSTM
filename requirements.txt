@@ -3,5 +3,5 @@ torch
 ipython
 ipykernel
 matplotlib
-allennlp
+allennlp==0.8.0
 tensorboard
